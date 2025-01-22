@@ -16,6 +16,8 @@ export default class SwaglabsProducts {
         this.ButtonBackItem = page.locator(this.ProductsLocator.ButtonBackItem);
         this.ButtonAddCart = page.locator(this.ProductsLocator.ButtonAddCart);
         this.IconShoppingCart = page.locator(this.ProductsLocator.IconShoppingCart);
+        this.ButtonRemoveSLB = page.locator(this.ProductsLocator.ButtonRemoveSLB);
+        this.ButtonContinue = page.locator(this.ProductsLocator.ButtonContinue);
     }
 
     async LoginValidUser(){
@@ -44,5 +46,10 @@ export default class SwaglabsProducts {
         await this.ButtonAddCart.waitFor({ state: 'visible' });
         await this.ButtonAddCart.click();
         await this.IconShoppingCart.click();
+    }
+
+    async RemoveProduct(){
+        await this.ButtonContinue.click();
+        await this.ButtonRemoveSLB.click();
     }
 }

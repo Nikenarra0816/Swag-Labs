@@ -5,4 +5,6 @@ export default class ProductsLocator {
     ButtonBackItem = "#back-to-products";
     ButtonAddCart = "#add-to-cart";
     IconShoppingCart = "#shopping_cart_container";
+    ButtonRemoveSLB ="#remove-sauce-labs-backpack";
+    ButtonContinue ="#continue-shopping";
 }
