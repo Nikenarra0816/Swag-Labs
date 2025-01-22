@@ -17,5 +17,11 @@ test('Login blank credentials', async ({ page }) => {
 test('Login with blank username credentials', async ({ page }) => {
     const objActions = new loginActions(page);
     await objActions.goto();
-    await objActions. LoginBlankUsername();
+    await objActions.LoginBlankUsername();
+});
+
+test('Login with blank password credentials', async ({ page }) => {
+    const objActions = new loginActions(page);
+    await objActions.goto();
+    await objActions.LoginBlankPassword();
 });

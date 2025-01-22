@@ -45,4 +45,15 @@ export default class SwaglabsLogin {
         await expect(this.MsgRequired).toContainText('Epic sadface: Username is required');  
     }
 
+    async LoginBlankPassword(){
+        await this.InputUsername.fill('standard_user');
+        await expect(this.InputUsername).toHaveValue('standard_user');
+        await this.InputPassword.fill ('');
+        await expect(this.InputPassword).toHaveValue('');
+        await this.ButtonLogin.click();
+
+        await expect(this.MsgRequired).toBeVisible();
+        await expect(this.MsgRequired).toContainText('Epic sadface: Password is required');  
+    }
+
 }
