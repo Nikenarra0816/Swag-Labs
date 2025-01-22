@@ -56,4 +56,17 @@ export default class SwaglabsLogin {
         await expect(this.MsgRequired).toContainText('Epic sadface: Password is required');  
     }
 
+    async LoginInvalidUser(){
+        await this.InputUsername.fill('niken');
+        await expect(this.InputUsername).toHaveValue('niken');
+        await this.InputPassword.fill ('nikencantik');
+        await expect(this.InputPassword).toHaveValue('nikencantik');
+        await this.ButtonLogin.click();
+
+        await expect(this.MsgRequired).toBeVisible();
+        await expect(this.MsgRequired).toContainText('Epic sadface: Username and password do not match any user in this service');  
+    }
+
+    
+
 }
