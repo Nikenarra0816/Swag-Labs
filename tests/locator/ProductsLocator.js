@@ -4,4 +4,5 @@ export default class ProductsLocator {
     DetailItem ="#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size";
     ButtonBackItem = "#back-to-products";
     ButtonAddCart = "#add-to-cart";
+    IconShoppingCart = "#shopping_cart_container";
 }

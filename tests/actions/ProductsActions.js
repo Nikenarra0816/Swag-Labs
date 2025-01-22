@@ -14,6 +14,8 @@ export default class SwaglabsProducts {
         this.TitleItem = page.locator(this.ProductsLocator.TitleItem);
         this.DetailItem = page.locator(this.ProductsLocator.DetailItem);
         this.ButtonBackItem = page.locator(this.ProductsLocator.ButtonBackItem);
+        this.ButtonAddCart = page.locator(this.ProductsLocator.ButtonAddCart);
+        this.IconShoppingCart = page.locator(this.ProductsLocator.IconShoppingCart);
     }
 
     async LoginValidUser(){
@@ -36,5 +38,11 @@ export default class SwaglabsProducts {
         const detailText = await this.DetailItem.textContent();
         //console.log('Product Detail Text:', detailText);
         await expect(detailText).toContain('Sauce Labs Backpack'); 
+    }
+
+    async AddCartProduct(){
+        await this.ButtonAddCart.waitFor({ state: 'visible' });
+        await this.ButtonAddCart.click();
+        await this.IconShoppingCart.click();
     }
 }
