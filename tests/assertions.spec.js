@@ -25,3 +25,9 @@ test('Login with blank password credentials', async ({ page }) => {
     await objActions.goto();
     await objActions.LoginBlankPassword();
 });
+
+test('Login Invalid credentials', async ({ page }) => {
+    const objActions = new loginActions(page);
+    await objActions.goto();
+    await objActions.LoginInvalidUser();
+});
