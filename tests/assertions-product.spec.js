@@ -22,3 +22,12 @@ test('Add Cart Products', async ({ page }) => {
     await objActions.DetailProduct();
     await objActions.AddCartProduct();
 });
+
+test('Remove Cart Products', async ({ page }) => {
+    const objActions = new productsActions(page);
+    await objActions.LoginValidUser();
+    await objActions.getHeaderText();
+    await objActions.DetailProduct();
+    await objActions.AddCartProduct();
+    await objActions.RemoveProduct();
+});
