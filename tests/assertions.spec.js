@@ -1,0 +1,12 @@
+// @ts-check
+const { test, expect } = require('@playwright/test');
+const {default: loginActions} = require('./actions/LoginActions');
+
+test('Login valid credentials', async ({ page }) => {
+  const objActions = new loginActions(page);
+  await objActions.goto();
+  await objActions.LoginValidUser();
+});
+
+
+
