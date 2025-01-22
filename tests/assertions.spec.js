@@ -8,5 +8,12 @@ test('Login valid credentials', async ({ page }) => {
   await objActions.LoginValidUser();
 });
 
+test('Login blank credentials', async ({ page }) => {
+    const objActions = new loginActions(page);
+    await objActions.goto();
+    await objActions.LoginBlankUser();
+  });
+
+
 
 

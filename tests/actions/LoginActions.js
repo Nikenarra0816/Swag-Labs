@@ -8,6 +8,7 @@ export default class SwaglabsLogin {
         this.InputUsername = page.locator(this.LoginLocator.inputUsername);
         this.InputPassword = page.locator(this.LoginLocator.inputPassword);
         this.ButtonLogin = page.locator(this.LoginLocator.buttonLogin);
+        this.MsgRequired = page.locator(this.LoginLocator.MsgRequired);
     }
 
     async goto(){
@@ -21,4 +22,16 @@ export default class SwaglabsLogin {
         await expect(this.InputPassword).toHaveValue('secret_sauce');
         await this.ButtonLogin.click();
     }
+
+    async LoginBlankUser(){
+        await this.InputUsername.fill('');
+        await expect(this.InputUsername).toHaveValue('');
+        await this.InputPassword.fill ('');
+        await expect(this.InputPassword).toHaveValue('');
+        await this.ButtonLogin.click();
+
+        await expect(this.MsgRequired).toBeVisible();
+        await expect(this.MsgRequired).toContainText('Epic sadface: Username is required');  
+    }
+
 }
