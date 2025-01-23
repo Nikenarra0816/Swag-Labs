@@ -14,6 +14,11 @@ export default class SwaglabsCheckout {
         this.ButtonAddProductLBL = page.locator(this.CheckoutLocator.ButtonAddProductLBL);
         this.ButtonAddProductLBS = page.locator(this.CheckoutLocator.ButtonAddProductLBS);
         this.IconShoppingCart = page.locator(this.CheckoutLocator.IconShoppingCart);
+        this.ButtonCheckout = page.locator(this.CheckoutLocator.ButtonCheckout);
+        this.FormFirstName = page.locator(this.CheckoutLocator.FormFirstName);
+        this.FormLastName = page.locator(this.CheckoutLocator.FormLastName);
+        this.FormZip = page.locator(this.CheckoutLocator.FormZip);
+        this.ButtonContinue = page.locator(this.CheckoutLocator.ButtonContinue);
     }
 
     async LoginValidUser(){
@@ -31,4 +36,14 @@ export default class SwaglabsCheckout {
         await this.ButtonAddProductLBS.click();
         await this.IconShoppingCart.click();
     }    
+
+    async FormCheckout(){
+        await this.ButtonCheckout.click();
+        await this.FormFirstName.fill('niken');
+        await expect(this.FormFirstName).toHaveValue('niken');
+        await this.FormLastName.fill('auliya');
+        await expect(this.FormLastName).toHaveValue('auliya');
+        await this.FormZip.fill('1212');
+        await this.ButtonContinue.click();
+    }
 }
