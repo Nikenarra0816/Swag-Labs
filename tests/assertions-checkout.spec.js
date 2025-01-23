@@ -7,3 +7,10 @@ test('Checkout 3 Product', async ({ page }) => {
   await objActions.LoginValidUser();
   await objActions.CheckoutMultiProduct();
 });
+test('Fill Form Confirm Checkout', async ({ page }) => {
+  const objActions = new CheckoutActions(page);
+  await objActions.LoginValidUser();
+  await objActions.CheckoutMultiProduct();
+  await objActions.FormCheckout();
+});
+
