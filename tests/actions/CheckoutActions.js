@@ -19,6 +19,7 @@ export default class SwaglabsCheckout {
         this.FormLastName = page.locator(this.CheckoutLocator.FormLastName);
         this.FormZip = page.locator(this.CheckoutLocator.FormZip);
         this.ButtonContinue = page.locator(this.CheckoutLocator.ButtonContinue);
+        this.ButtonFinish = page.locator(this.CheckoutLocator.ButtonFinish);
     }
 
     async LoginValidUser(){
@@ -45,5 +46,9 @@ export default class SwaglabsCheckout {
         await expect(this.FormLastName).toHaveValue('auliya');
         await this.FormZip.fill('1212');
         await this.ButtonContinue.click();
+    }
+
+    async FinishCheckout(){
+        await this.ButtonFinish.click();
     }
 }

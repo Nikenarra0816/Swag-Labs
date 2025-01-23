@@ -14,3 +14,11 @@ test('Fill Form Confirm Checkout', async ({ page }) => {
   await objActions.FormCheckout();
 });
 
+test('Finish Checkout', async ({ page }) => {
+  const objActions = new CheckoutActions(page);
+  await objActions.LoginValidUser();
+  await objActions.CheckoutMultiProduct();
+  await objActions.FormCheckout();
+  await objActions.FinishCheckout();
+});
+
