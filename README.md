@@ -1,66 +1,59 @@
 **SWAG LABS AUTOMATION TEST - PLAYWRIGHT (JAVASCRIPT) 🎉**
 
-**Deskripsi**
+**Description**
 
-Proyek ini bertujuan untuk mengotomatiskan pengujian aplikasi web Swag Labs (https://www.saucedemo.com/) menggunakan Playwright dengan bahasa JavaScript. 
-Pengujian dilakukan untuk memastikan fungsionalitas utama aplikasi berjalan dengan baik. 
-Proyek ini mendukung pengujian lintas browser menggunakan Playwright.
+This project aims to automate the testing of the Swag Labs web application (https://www.saucedemo.com/) using Playwright with JavaScript. The tests are performed to ensure the core functionality of the application works properly. This project supports cross-browser testing using Playwright.
 
-**Fitur Utama**
+**Key Features**
 
 ✅ Authentication
 ✅ Add Product to Cart
 ✅ Checkout
 
-**Persyaratan**
+**Requirements**
 
-✅ Node.js (versi 14.x atau lebih baru)
-✅ Playwright 
-✅ Git 
+✅ Node.js (version 14.x or later)
+✅ Playwright
+✅ Git
 
+**SETUP AND INSTALLATION 🎉**
 
+Follow the steps below:
 
-**SETUP DAN INSTALASI** 🎉
+**1. Clone the Repository**
 
-Ikuti langkah - langkah dibawah ini :
-
-**1. Clone Repositori**
-
-Pertama, clone repositori menggunakan perintah git berikut:
+First, clone the repository using the following git command:
 
 👉🏼 git clone https://github.com/Nikenarra0816/Swag-Labs.git
 
 👉🏼 cd Swag-Labs
 
-**2. Install Dependensi**
+**2. Install Dependencies**
 
-Install semua dependensi yang diperlukan, termasuk Playwright, dengan menjalankan perintah berikut:
+Install all necessary dependencies, including Playwright, by running the following command:
 
 👉🏼 npm install
 
-**3. Install Browser untuk Playwright**
+**3. Install Browsers for Playwright**
 
-Playwright memerlukan browser untuk menjalankan pengujian. Install browser yang diperlukan dengan perintah berikut:
+Playwright requires browsers to run tests. Install the necessary browsers with the following command:
 
 👉🏼 npx playwright install
 
+**RUNNING TESTS 🎉**
 
+**1. Run All Tests in All Browsers**
 
-
-**MENJALANKAN PENGUJIAN** 🎉
-
-**1. Menjalankan semua pengujian di Semua Browser**
-
-Untuk menjalankan pengujian otomatis di semua browser yang didukung (Chromium, Firefox, WebKit), jalankan perintah berikut:
+To run the automated tests in all supported browsers (Chromium, Firefox, WebKit), run the following command:
 
 👉🏼 npx playwright test
 
-**2. Menjalankan Pengujian di Browser Tertentu**
+**2. Run Tests in a Specific Browser**
 
-Jika ingin menjalankan pengujian hanya di satu browser tertentu, dapat menggunakan salah satu perintah berikut:
+If you want to run tests in a specific browser, you can use one of the following commands:
 
-**Chromium** ➡️ npx playwright test --project=chromium
+Chromium ➡️ npx playwright test --project=chromium
 
-**Firefox** ➡️ npx playwright test --project=firefox
+Firefox ➡️ npx playwright test --project=firefox
 
-**WebKit** ➡️ npx playwright test --project=webkit
+WebKit ➡️ npx playwright test --project=webkit
