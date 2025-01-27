@@ -18,6 +18,7 @@ Proyek ini mendukung pengujian lintas browser menggunakan Playwright.
 ✅ Git 
 
 
+
 **SETUP DAN INSTALASI** 🎉
 
 Ikuti langkah - langkah dibawah ini :
@@ -41,6 +42,9 @@ Install semua dependensi yang diperlukan, termasuk Playwright, dengan menjalanka
 Playwright memerlukan browser untuk menjalankan pengujian. Install browser yang diperlukan dengan perintah berikut:
 
 👉🏼 npx playwright install
+
+
+
 
 **MENJALANKAN PENGUJIAN** 🎉
 
