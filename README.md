@@ -24,7 +24,7 @@ Follow the steps below:
 
 First, clone the repository using the following git command:
 
-👉🏼 git clone https://github.com/Nikenarra0816/Swag-Labs.git
+👉🏼 git clone https://github.com/Nikenarra0816/SwagLabs
 
 👉🏼 cd Swag-Labs
 
