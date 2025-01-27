@@ -1,4 +1,4 @@
-**Swag Labs Automation Test - Playwright (JavaScript) 🎉**
+**SWAG LABS AUTOMATION TEST - PLAYWRIGHT (JAVASCRIPT) 🎉**
 
 **Deskripsi**
 
