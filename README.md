@@ -1,6 +1,7 @@
 **Swag Labs Automation Test - Playwright (JavaScript) 🎉**
 
 **Deskripsi**
+
 Proyek ini bertujuan untuk mengotomatiskan pengujian aplikasi web Swag Labs (https://www.saucedemo.com/) menggunakan Playwright dengan bahasa JavaScript. 
 Pengujian dilakukan untuk memastikan fungsionalitas utama aplikasi berjalan dengan baik. 
 Proyek ini mendukung pengujian lintas browser menggunakan Playwright.
